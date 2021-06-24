@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "333801296564",
+    "project_id": "chaiwala-420",
+    "storage_bucket": "chaiwala-420.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333801296564:android:78d40c717bd4018eef3de1",
+        "android_client_info": {
+          "package_name": "com.insight.chaiwala420"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333801296564-6bv7uded2c9g92mtrf6cnnpkk84edbil.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmNW2tgAXSWMMz1jwEJzc6U44_eB_hfvE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "333801296564-6bv7uded2c9g92mtrf6cnnpkk84edbil.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
