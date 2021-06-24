@@ -13,3 +13,7 @@
 * Add firebase sdk in your flutter project 
     * Copy the dependency classpath `classpath 'com.google.gms:google-services:4.0.1'` and paste it in `android > build.gradle > dependencies`
     * Copy the plugin `apply plugin: 'com.google.gms.google-services'` from App-lelve build.gradle and paste it in `android > app > build.gradle`
+
+### To enable authentication in firebase
+* Select authentication and get started
+* Enable the service you want for authentication
