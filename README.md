@@ -17,3 +17,15 @@
 ### To enable authentication in firebase
 * Select authentication and get started
 * Enable the service you want for authentication
+
+
+--- 
+# IMPLEMENTATION NOTE: 
+
+* Chaiwala420 has a main widget `ChaiWala` which return a `Wrapper` widget
+* The `Wrapper` widget checks for the user current status(if authenticated or not). 
+    * If the user is not authenticated, it shows the `Authentication` widget.
+        * The `Authentication` widget returns 2 widgets, `SignIn` and `Register`.
+        * To listen to the authentication changes, we use a stream
+    * If user is authenticated, it shows the `Home` widget.
+        * The `Home` widget returns 2 widgets, `BrewList` and `Settings`.
