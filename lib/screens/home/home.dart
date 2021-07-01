@@ -1,4 +1,5 @@
 import 'package:chaiwala420/models/chai_model.dart';
+import 'package:chaiwala420/screens/home/settings_form.dart';
 import 'package:chaiwala420/services/auth.dart';
 import 'package:chaiwala420/services/database.dart';
 import 'package:chaiwala420/widgets/common/hamburger.dart';
@@ -21,9 +22,10 @@ class Home extends StatelessWidget {
           builder: (context) {
             return Container(
               padding: EdgeInsets.symmetric(vertical: 20, horizontal: 60),
-              child: Text('Bottom Sheet'),
+              child: SettingsForm(),
             );
-          }
+          },
+        isScrollControlled: true,
       );
     }
 
@@ -70,7 +72,15 @@ class Home extends StatelessWidget {
           //
           //   ],
           // )
-          ChaiList(),
+          Container(
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/coffee_bg.png'),
+                  fit: BoxFit.cover
+                )
+              ),
+              child: ChaiList()
+          ),
       ),
     );
   }

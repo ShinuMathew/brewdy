@@ -1,5 +1,7 @@
 import 'package:chaiwala420/models/chai_model.dart';
+import 'package:chaiwala420/models/user_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:chaiwala420/models/user_model.dart';
 
 class DatabaseService {
 
@@ -27,8 +29,24 @@ class DatabaseService {
     }).toList();
   }
 
+  //  UserData from snapshot
+  UserData _userDataFromSnapshot(DocumentSnapshot snapshot) {
+    return UserData(
+      uid: uid,
+      name: snapshot.get('name'),
+      sugars: snapshot.get('sugars'),
+      strength: snapshot.get('strength'),
+    );
+  }
+
+  //  Get chai stream
   Stream<List<ChaiModel>> get chai {
     return chaiCollection.snapshots()
     .map(_chaiListFromSnapshot);
+  }
+
+  //  Get user document
+  Stream<UserData> get userData {
+    return chaiCollection.doc(uid).snapshots().map(_userDataFromSnapshot);
   }
 }

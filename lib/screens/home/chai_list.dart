@@ -17,7 +17,7 @@ class _ChaiListState extends State<ChaiList> {
   @override
   Widget build(BuildContext context) {
 
-    final chai = Provider.of<List<ChaiModel>>(context);
+    final chai = Provider.of<List<ChaiModel>>(context) ?? [];
 
     return ListView.builder(
         itemCount: chai.length,
