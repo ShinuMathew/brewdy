@@ -14,6 +14,19 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    void _showSettingsPanel() {
+      showModalBottomSheet(
+          context: context,
+          builder: (context) {
+            return Container(
+              padding: EdgeInsets.symmetric(vertical: 20, horizontal: 60),
+              child: Text('Bottom Sheet'),
+            );
+          }
+      );
+    }
+
     return StreamProvider<List<ChaiModel>>.value(
       value: DatabaseService().chai,
       child: Scaffold(
@@ -35,21 +48,30 @@ class Home extends StatelessWidget {
                   label: Text('Logout'),
                   onPressed: () async {
                     await _auth.signOut();
-                  })
+                  }),
+              FlatButton.icon(
+                  icon : Icon(Icons.settings),
+                  onPressed: () => _showSettingsPanel(),
+                  label: Text('Settings'),
+                  ),
+
             ],
           ),
-          body: Column(
-            children: [
-              Text(
-                "WELCOME\n${FirebaseAuth.instance.currentUser.displayName}"
-                    .toUpperCase(),
-                style: TextStyle(
-                    color: Colors.brown[400], fontSize: 30, letterSpacing: 1.5),
-                textAlign: TextAlign.center,
-              ),
-              ChaiList(),
-            ],
-          )),
+          body:
+          // Column(
+          //   children: [
+          //     Text(
+          //       "WELCOME\n${FirebaseAuth.instance.currentUser.displayName}"
+          //           .toUpperCase(),
+          //       style: TextStyle(
+          //           color: Colors.brown[400], fontSize: 30, letterSpacing: 1.5),
+          //       textAlign: TextAlign.center,
+          //     ),
+          //
+          //   ],
+          // )
+          ChaiList(),
+      ),
     );
   }
 }
