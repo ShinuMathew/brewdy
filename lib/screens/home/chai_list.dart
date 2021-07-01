@@ -2,6 +2,8 @@ import 'package:chaiwala420/models/chai_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'chai_tile.dart';
+
 
 class ChaiList extends StatefulWidget {
 
@@ -16,11 +18,11 @@ class _ChaiListState extends State<ChaiList> {
   Widget build(BuildContext context) {
 
     final chai = Provider.of<List<ChaiModel>>(context);
-    chai.forEach((chai) {
-      print(chai.strength);
-      print(chai.sugars);
-      print(chai.name);
-    });
-    return Container();
+
+    return ListView.builder(
+        itemCount: chai.length,
+        itemBuilder: (context, index) {
+          return ChaiTile(chai: chai[index]);
+        });
   }
 }
