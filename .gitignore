@@ -9,6 +9,8 @@
 .history
 .svn/
 
+/ios/GoogleService-Info.plist
+
 # IntelliJ related
 *.iml
 *.ipr
