@@ -1,5 +1,5 @@
-# CHAIWALA420 though sounds debatable :stuck_out_tongue_winking_eye: , is a simple app using flutter and firebase.
-`Chaiwala420 is an app that allows users of a team or gang to store thier beverage preferrences and use that to order online beverages in bulk for their evening snacks or mini parties`
+# Brewdy is a simple app using flutter and firebase.
+`Brewdy allows users of a team or gang to store thier beverage preferrences and use that to order online beverages in bulk for their evening snacks or mini parties`
 
 ## Flutter firebase setup:
 
@@ -22,7 +22,7 @@
 --- 
 # IMPLEMENTATION NOTE: 
 
-* Chaiwala420 has a main widget `ChaiWala` which return a `Wrapper` widget
+* Brewdy has a main widget `ChaiWala` which return a `Wrapper` widget
 * The `Wrapper` widget checks for the user current status(if authenticated or not). 
     * If the user is not authenticated, it shows the `Authentication` widget.
         * The `Authentication` widget returns 2 widgets, `SignIn` and `Register`.
